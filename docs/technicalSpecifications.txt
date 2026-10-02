@@ -1,0 +1,71 @@
+Centre de formation - DEV - Brief projet
+Page 1 sur 2
+JT_DEV_B30_3.1
+Command line todo list with Rust
+1 Initial situation
+1.1 Rust is a compiled, multi-paradigm programming language designed for performance and safety, especially memory
+safety. It is syntactically similar to C++, but provides better memory safety while maintaining high performance. Rust
+is used in various applications, from system programming to web development.
+1.2 In this simple project, you will create a simple command line to-do list application using Rust. The application will
+allow users to add, view, complete, and delete tasks from their to-do list directly from the command line interface
+(CLI). The tasks will be stored in a local file in JSON format to ensure data persistence between sessions.
+2 Deliverables
+2.1 Github repository containing your project, it must work out of the box (following the setup guide provided in your
+README).
+3 Andragogic conditions
+3.1 Work is carried out independently, on an individual basis
+3.2 You are allowed to help each other, share ideas and discuss solutions, but each trainee must provide their own
+implementation with their own code.
+3.3 Apprentices have access to all the resources they need, particularly on the web.
+3.4 Don’t hesitate to ask AI for explanations, but avoid asking it for answers. The more you ask for answers, the less
+you learn.
+3.5 Maximum allowed time for the project: 10 full days (7.5 hours per day). You must manage your time independently.
+On project beginning, inform your trainer of the start date and time.
+4 Steps
+Do not forget to commit your changes often, minimum once per task.
+4.1 Create a new empty GitHub repository on your personal account, then clone it on your computer. Initialize a new Rust
+project in it with cargo init .
+4.2 Implement a simple program where user can write a todo (when the program is launched with cargo run ) and the
+program display it back to the user.
+4.3 Implement the ability to save the todo to a text file (e.g., todo.txt ). On each run, the todo entered by the user should
+be saved on a newline in the file.
+4.4 Add the ability to view all todos when the program is launched with cargo run -- --view . The program should read
+the todo.txt file and display all the todos with their corresponding line numbers.
+4.5 Implement the ability to delete a todo when the program is launched with cargo run --delete <line_number> . The
+program should remove the specified todo from the todo.txt file.
+4.6 Update your program to use a JSON file (e.g., todos.json ) to store todos instead of a plaintext file. Use the serde
+crate to serialize and deserialize the todo list.
+FONDATION JOBTREK v3.1, mainteneur: Bastien Nicoud, 2026-10-01, JT_DEV_B30_3.1
+Command line todo list with Rust jobtrek.ch
+Centre de formation - DEV - Brief projet
+Page 2 sur 2
+4.7 Update the program to allow marking a todo as completed when launched with
+cargo run --complete <line_number> . The program should update the corresponding todo in the todos.json file to
+indicate that it has been completed.
+4.8 Update your program to use the clap crate for command-line argument parsing. This will help manage different
+commands and options more effectively ( --delete and --complete should be handled by clap).
+4.9 Update your program to allow the user to create todos with due dates. The user should be able to specify a due date
+when adding a todo (e.g., cargo run --add "Buy groceries" --due "2023-12-31" ). The due date should be stored in
+the todos.json file.
+4.10 Update the viewing functionality to display todos sorted by their due dates. Todos without due dates should appear
+at the end of the list.
+4.11 Implement a search functionality that allows users to search for todos containing specific keywords when launched
+with cargo run --search <keyword> . The program should display all matching todos.
+5 Resources
+5.1 https://rust-lang.org/
+5.2 https://doc.rust-lang.org/book/
+5.3 https://doc.rust-lang.org/rust-by-example/
+5.4 https://github.com/rust-lang/rustlings/
+5.5 https://github.com/clap-rs/clap
+5.6 https://github.com/serde-rs/serde
+6 Evaluation criteria
+6.1 All the requested features must be implemented and working.
+6.2 All commit messages must comply with conventional commits standard.
+6.3 All the codebase must be formatted with cargo fmt .
+6.4 There are no lints errors (with clippy) cargo clippy .
+6.5 The cli app work out of the box following the README instructions.
+6.6 The README must contain a quick project description and setup instructions.
+6.7 There is no code repetitions in the codebase.
+6.8 There is no dead code.
+FONDATION JOBTREK v3.1, mainteneur: Bastien Nicoud, 2026-10-01, JT_DEV_B30_3.1
+Command line todo list with Rust jobtrek.ch
